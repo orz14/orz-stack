@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -10,7 +12,11 @@ export default {
             center: true,
             padding: "16px",
         },
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ["Nunito", ...defaultTheme.fontFamily.sans],
+            },
+        },
     },
     plugins: [require("@tailwindcss/forms")],
 };
