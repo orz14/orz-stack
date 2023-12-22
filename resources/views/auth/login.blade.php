@@ -69,7 +69,7 @@
         @endif
 
         <div class="pt-4 text-sm text-center text-gray-700">
-            {{ __('Don\'t have an account?') }} <a href="#" class="text-indigo-700 underline transition hover:text-indigo-500 decoration-2 decoration-indigo-500/30">{{ __('Register') }}</a>
+            {{ __('Don\'t have an account?') }} <a href="{{ route('register') }}" class="text-indigo-700 underline transition hover:text-indigo-500 decoration-2 decoration-indigo-500/30">{{ __('Register') }}</a>
         </div>
     </main>
 @endsection
