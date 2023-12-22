@@ -7,7 +7,9 @@
     <x-auth-session-status class="mb-5" :status="session('status')" />
     
     <main>
-        <form class="space-y-4">
+        <form action="{{ route('login') }}" method="POST" class="space-y-4">
+            @csrf
+
             {{-- Email --}}
             <div>
                 <x-input-label for="email" :text="__('Email')" />
