@@ -6,56 +6,44 @@
     <div class="menu-content">
         <ul class="menu-items">
             <div class="menu-title">Menu Title</div>
-            <li class="item">
-                <a href="{{ route('dashboard') }}">Dashboard</a>
-            </li>
+
+            <x-partials.sidebar-link
+                :to="route('dashboard')"
+                icon="fa-solid fa-fire"
+                text="Dashboard"
+                :active="Route::is('dashboard') ? 'active' : ''"
+            />
 
             <div class="menu-title">Menu Title</div>
-            <li class="item">
-                <a href="#">Single Menu</a>
-            </li>
-            <li class="item">
-                <div class="submenu-item">
-                    <span>Dropdown Menu 1</span>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-                <ul class="menu-items submenu">
-                    <div class="menu-title">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        Dropdown Menu 1
-                    </div>
-                    <li class="item">
-                        <a href="#">Submenu 1</a>
-                    </li>
-                    <li class="item">
-                        <a href="#">Submenu 2</a>
-                    </li>
-                    <li class="item">
-                        <a href="#">Submenu 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="item">
-                <div class="submenu-item">
-                    <span>Dropdown Menu 2</span>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-                <ul class="menu-items submenu">
-                    <div class="menu-title">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        Dropdown Menu 2
-                    </div>
-                    <li class="item">
-                        <a href="#">Submenu 1</a>
-                    </li>
-                    <li class="item">
-                        <a href="#">Submenu 2</a>
-                    </li>
-                    <li class="item">
-                        <a href="#">Submenu 3</a>
-                    </li>
-                </ul>
-            </li>
+
+            <x-partials.sidebar-link
+                icon="fa-regular fa-folder"
+                text="Single Menu"
+            />
+
+            <x-partials.sidebar-dropdown icon="fa-regular fa-folder" text="Dropdown Menu 1">
+                <x-partials.sidebar-dropdown-item
+                    text="Submenu 1"
+                />
+                <x-partials.sidebar-dropdown-item
+                    text="Submenu 2"
+                />
+                <x-partials.sidebar-dropdown-item
+                    text="Submenu 3"
+                />
+            </x-partials.sidebar-dropdown>
+
+            <x-partials.sidebar-dropdown icon="fa-regular fa-folder" text="Dropdown Menu 2">
+                <x-partials.sidebar-dropdown-item
+                    text="Submenu 1"
+                />
+                <x-partials.sidebar-dropdown-item
+                    text="Submenu 2"
+                />
+                <x-partials.sidebar-dropdown-item
+                    text="Submenu 3"
+                />
+            </x-partials.sidebar-dropdown>
         </ul>
     </div>
 </aside>

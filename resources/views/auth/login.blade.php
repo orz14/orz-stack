@@ -27,7 +27,7 @@
             <div class="flex items-center justify-between w-full text-sm">
                 {{-- Remember Me --}}
                 <div class="inline-flex items-center gap-x-2">
-                    <input class="text-indigo-700 transition-all duration-300 ease-in-out bg-white border-gray-400 rounded shadow-sm focus:border-indigo-700 focus:ring focus:ring-indigo-600/20 focus:ring-opacity-80" type="checkbox" name="remember" id="remember">
+                    <input class="text-indigo-600 transition-all duration-300 ease-in-out bg-white border-gray-400 rounded shadow-sm focus:border-indigo-600 focus:ring focus:ring-indigo-600/20 focus:ring-opacity-80" type="checkbox" name="remember" id="remember">
                     <label class="text-sm font-medium text-gray-700 select-none" for="remember">
                         {{ __('Remember me') }}
                     </label>
