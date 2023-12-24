@@ -1,7 +1,9 @@
 @extends('layouts.guest')
 @section('title', 'Login')
 @section('content')
-    <h1 class="mb-5 text-xl font-medium text-center text-gray-800 sm:text-2xl">Login</h1>
+    <h1 class="mb-5 text-xl font-medium text-center text-gray-800 sm:text-2xl">
+        {{ __('Login') }}
+    </h1>
 
     {{-- Session Status --}}
     <x-auth-session-status class="mb-5" :status="session('status')" />
@@ -35,7 +37,7 @@
                 
                 {{-- Lupa Password --}}
                 @if (Route::has('password.request'))
-                    <a href="#" class="text-right text-indigo-700 underline transition hover:text-indigo-500 decoration-2 decoration-indigo-500/30">
+                    <a href="{{ route('password.request') }}" class="text-right text-indigo-700 underline transition hover:text-indigo-500 decoration-2 decoration-indigo-500/30">
                         {{ __('Forgot Password?') }}
                     </a>
                 @endif
@@ -46,7 +48,7 @@
             </x-button>
         </form>
         
-        @if (env('ENABLE_SOCIAL_LOGIN'))
+        @if (env('GITHUB_CLIENT_ID') != null || env('GOOGLE_CLIENT_ID') != null)
             <div class="py-4 text-xs text-center text-gray-400 select-none">OR</div>
 
             <div class="space-y-2">

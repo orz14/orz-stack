@@ -20,7 +20,7 @@
         {{-- Styles --}}
         @vite('resources/css/app.css')
     </head>
-    <body class="antialiased text-[#697a8d] bg-[#F5F5F9]">
+    <body class="antialiased text-[#697a8d] bg-[#F5F5F9] text-sm md:text-base">
         <x-partials.sidebar />
 
         <x-partials.navbar />
@@ -37,30 +37,6 @@
 
         {{-- Scripts --}}
         @vite('resources/js/app.js')
-
-        <script>
-            const sidebar = document.querySelector(".sidebar");
-            const sidebarClose = document.querySelector("#sidebar-close");
-            const menu = document.querySelector(".menu-content");
-            const menuItems = document.querySelectorAll(".submenu-item");
-            const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
-            sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
-            menuItems.forEach((item, index) => {
-                item.addEventListener("click", () => {
-                    menu.classList.add("submenu-active");
-                    item.classList.add("show-submenu");
-                    menuItems.forEach((item2, index2) => {
-                        if (index != index2) {
-                            item2.classList.remove("show-submenu");
-                        }
-                    });
-                });
-            });
-            subMenuTitles.forEach((title) => {
-                title.addEventListener("click", () => {
-                    menu.classList.remove("submenu-active");
-                });
-            });
-        </script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
     </body>
 </html>
