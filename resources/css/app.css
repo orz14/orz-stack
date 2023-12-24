@@ -6,7 +6,7 @@
     @apply fixed h-full w-[260px] bg-white p-[15px] z-[99];
 }
 .logo {
-    @apply flex items-center gap-x-2 text-[25px] py-6 px-[15px] text-[#566a7f] font-bold;
+    @apply flex items-center gap-x-2 text-[25px] py-7 px-[15px] text-[#566a7f] font-bold;
 }
 .sidebar a {
     @apply text-[#697a8d] no-underline;
@@ -83,15 +83,36 @@
     @apply fixed p-6 bg-[#F5F5F9];
 }
 .navbar {
-    @apply w-full px-6 py-5 flex items-center justify-between gap-x-5 text-[#697a8d] bg-white rounded-md box-shadow;
+    @apply w-full px-6 py-2 flex items-center justify-between gap-x-5 text-[#697a8d] bg-white rounded-md box-shadow;
 }
 .navbar #sidebar-close {
     @apply cursor-pointer;
 }
 .main {
-    @apply relative pt-[113px] min-h-screen z-[100] bg-[#F5F5F9];
+    @apply relative pt-[118px] min-h-screen z-[100] bg-[#F5F5F9];
 }
 
 .box-shadow {
     box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+}
+
+.dropbtn {
+    @apply w-10 h-10 mt-[7px] rounded-full border-none cursor-pointer overflow-hidden;
+}
+.dropdown {
+    @apply relative block;
+}
+.dropdown-content {
+    @apply hidden absolute right-0 bg-white min-w-[160px] rounded-md overflow-auto box-shadow z-[1];
+}
+.dropdown-content a,
+.dropdown-content button {
+    @apply block w-full px-4 py-3 text-left text-black no-underline;
+}
+.dropdown a:hover,
+.dropdown button:hover {
+    @apply bg-gray-100/80;
+}
+.show {
+    @apply block;
 }
