@@ -5,43 +5,43 @@
     </a>
     <div class="menu-content">
         <ul class="menu-items">
-            <div class="menu-title">Menu Title</div>
+            <div class="menu-title">{{ __('Menu Title') }}</div>
 
             <x-partials.sidebar-link
                 :to="route('dashboard')"
                 icon="fa-solid fa-fire"
-                text="Dashboard"
+                :text="__('Dashboard')"
                 :active="Route::is('dashboard') ? 'active' : ''"
             />
 
-            <div class="menu-title">Menu Title</div>
+            <div class="menu-title">{{ __('Menu Title') }}</div>
 
             <x-partials.sidebar-link
                 icon="fa-regular fa-folder"
-                text="Single Menu"
+                :text="__('Single Menu')"
             />
 
-            <x-partials.sidebar-dropdown icon="fa-regular fa-folder" text="Dropdown Menu 1">
+            <x-partials.sidebar-dropdown icon="fa-regular fa-folder" :text="__('Dropdown Menu 1')">
                 <x-partials.sidebar-dropdown-item
-                    text="Submenu 1"
+                    :text="__('Submenu 1')"
                 />
                 <x-partials.sidebar-dropdown-item
-                    text="Submenu 2"
+                    :text="__('Submenu 2')"
                 />
                 <x-partials.sidebar-dropdown-item
-                    text="Submenu 3"
+                    :text="__('Submenu 3')"
                 />
             </x-partials.sidebar-dropdown>
 
-            <x-partials.sidebar-dropdown icon="fa-regular fa-folder" text="Dropdown Menu 2">
+            <x-partials.sidebar-dropdown icon="fa-regular fa-folder" :text="__('Dropdown Menu 2')">
                 <x-partials.sidebar-dropdown-item
-                    text="Submenu 1"
+                    :text="__('Submenu 1')"
                 />
                 <x-partials.sidebar-dropdown-item
-                    text="Submenu 2"
+                    :text="__('Submenu 2')"
                 />
                 <x-partials.sidebar-dropdown-item
-                    text="Submenu 3"
+                    :text="__('Submenu 3')"
                 />
             </x-partials.sidebar-dropdown>
         </ul>

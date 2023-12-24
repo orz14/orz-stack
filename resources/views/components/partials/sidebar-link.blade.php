@@ -3,6 +3,6 @@
 <li class="item {{ $active ?? '' }}">
     <a href="{{ $to ?? '#' }}" class="menu {{ $active ?? '' }}">
         <i class="{{ $icon ?? '' }} icon"></i>
-        {{ $text ?? 'Menu' }}
+        {{ $text ?? __('Menu') }}
     </a>
 </li>
