@@ -20,7 +20,7 @@
         {{-- Styles --}}
         @vite('resources/css/app.css')
     </head>
-    <body class="antialiased text-[#697a8d] bg-[#F5F5F9]">
+    <body class="antialiased text-[#697a8d] bg-[#F5F5F9] text-sm md:text-base">
         <x-partials.sidebar />
 
         <x-partials.navbar />

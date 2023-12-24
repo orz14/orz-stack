@@ -1,6 +1,6 @@
-<aside class="sidebar">
+<aside class="sidebar group">
     <a href="/" class="logo">
-        <x-application-logo class="w-8 h-8" />
+        <x-application-logo class="transition-all duration-300 ease-in-out w-7 h-7 md:w-8 md:h-8 group-hover:-rotate-12" />
         {{ config('app.name', 'ORZ Stack') }}
     </a>
     <div class="menu-content">

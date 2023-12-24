@@ -17,7 +17,7 @@
         {{-- Scripts --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased text-gray-900 bg-gray-100">
+    <body class="text-sm antialiased text-gray-900 bg-gray-100 md:text-base">
         <div class="container">
             <div class="flex flex-col items-center justify-center min-h-screen">
                 <div class="w-full max-w-lg py-10 overflow-hidden bg-white shadow-md px-7 sm:px-16 sm:py-14 rounded-3xl">
