@@ -46,7 +46,7 @@
             </x-button>
         </form>
         
-        @if (env('ENABLE_SOCIAL_LOGIN'))
+        @if (env('GITHUB_CLIENT_ID') != null || env('GOOGLE_CLIENT_ID') != null)
             <div class="py-4 text-xs text-center text-gray-400 select-none">OR</div>
 
             <div class="space-y-2">
