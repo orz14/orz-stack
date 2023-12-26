@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('title') · {{ config('app.name', 'ORZ Stack') }}</title>
+        <title>{{ $title }} · {{ config('app.name', 'ORZ Stack') }}</title>
         <link rel="shortcut icon" href="{{ asset('assets/img/laravel-indigo-2.webp') }}" type="image/x-icon">
 
         {{-- Fonts --}}
@@ -28,7 +28,7 @@
         <section class="main">
             <div class="px-6">
                 <main>
-                    @yield('content')
+                    {{ $slot }}
                 </main>
 
                 <x-partials.footer />

@@ -1,11 +1,13 @@
-@extends('layouts.app')
-@section('title', 'Dashboard')
-@section('content')
-    <x-title>
+<x-app-layout>
+    <x-slot name="title">
         {{ __('Dashboard') }}
-    </x-title>
+    </x-slot>
+
+    <x-header>
+        {{ __('Dashboard') }}
+    </x-header>
 
     <x-card>
         {{ __("You're logged in!") }}
     </x-card>
-@endsection
+</x-app-layout>

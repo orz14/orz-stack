@@ -1,6 +1,8 @@
-@extends('layouts.guest')
-@section('title', 'Reset Password')
-@section('content')
+<x-guest-layout>
+    <x-slot name="title">
+        {{ __('Reset Password') }}
+    </x-slot>
+
     <h1 class="mb-5 text-xl font-medium text-center text-gray-800 sm:text-2xl">
         {{ __('Reset Password') }}
     </h1>
@@ -38,4 +40,4 @@
             </x-button>
         </form>
     </main>
-@endsection
+</x-guest-layout>
