@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Dashboard')
 @section('content')
-    <x-title>
+    <x-header>
         {{ __('Dashboard') }}
-    </x-title>
+    </x-header>
 
     <x-card>
         {{ __("You're logged in!") }}
