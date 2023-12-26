@@ -1,6 +1,8 @@
-@extends('layouts.guest')
-@section('title', 'Register')
-@section('content')
+<x-guest-layout>
+    <x-slot name="title">
+        {{ __('Register') }}
+    </x-slot>
+
     <h1 class="mb-5 text-xl font-medium text-center text-gray-800 sm:text-2xl">
         {{ __('Register') }}
     </h1>
@@ -46,4 +48,4 @@
             {{ __('Already have an account?') }} <a href="{{ route('login') }}" class="text-indigo-700 underline transition hover:text-indigo-500 decoration-2 decoration-indigo-500/30">{{ __('Login') }}</a>
         </div>
     </main>
-@endsection
+</x-guest-layout>
