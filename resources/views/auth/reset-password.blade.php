@@ -1,8 +1,4 @@
-<x-guest-layout>
-    <x-slot name="title">
-        {{ __('Reset Password') }}
-    </x-slot>
-
+<x-guest-layout title="{{ __('Reset Password') }}">
     <h1 class="mb-5 text-xl font-medium text-center text-gray-800 sm:text-2xl">
         {{ __('Reset Password') }}
     </h1>
