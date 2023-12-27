@@ -14,7 +14,7 @@
         </div>
     @endif
     
-    <main class="space-y-4">
+    <main class="space-y-2">
         <form action="{{ route('verification.send') }}" method="POST">
             @csrf
 
