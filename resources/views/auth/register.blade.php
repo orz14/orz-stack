@@ -1,8 +1,4 @@
-<x-guest-layout>
-    <x-slot name="title">
-        {{ __('Register') }}
-    </x-slot>
-
+<x-guest-layout title="{{ __('Register') }}">
     <h1 class="mb-5 text-xl font-medium text-center text-gray-800 sm:text-2xl">
         {{ __('Register') }}
     </h1>
