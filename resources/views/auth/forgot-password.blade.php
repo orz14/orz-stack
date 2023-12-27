@@ -21,9 +21,15 @@
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
-            <x-button class="w-full bg-gray-800 hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900">
-                {{ __('Email Password Reset Link') }}
-            </x-button>
+            <div class="space-y-2">
+                <x-button class="w-full bg-gray-800 hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900">
+                    {{ __('Email Password Reset Link') }}
+                </x-button>
+                
+                <x-button-link :to="route('login')" class="w-full bg-gray-500 hover:bg-gray-400 focus:bg-gray-400 active:bg-gray-600">
+                    {{ __('Back') }}
+                </x-button-link>
+            </div>
         </form>
     </main>
 </x-guest-layout>
