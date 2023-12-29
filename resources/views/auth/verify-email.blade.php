@@ -26,7 +26,7 @@
         <form action="{{ route('logout') }}" method="POST">
             @csrf
 
-            <x-button class="w-full bg-red-800 hover:bg-red-700 focus:bg-red-700 active:bg-red-900">
+            <x-button class="w-full bg-red-600 hover:bg-red-500 focus:bg-red-500 active:bg-red-700">
                 {{ __('Logout') }}
             </x-button>
         </form>

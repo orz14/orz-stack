@@ -14,6 +14,24 @@
                 :active="Route::is('dashboard') ? 'active' : ''"
             />
 
+            @can('admin')
+                <x-partials.sidebar-link
+                    :to="route('dashboard.admin')"
+                    icon="fa-solid fa-user"
+                    :text="__('Admin Page')"
+                    :active="Route::is('dashboard.admin') ? 'active' : ''"
+                />
+            @endcan
+
+            @can('user')
+                <x-partials.sidebar-link
+                    :to="route('dashboard.user')"
+                    icon="fa-solid fa-user"
+                    :text="__('User Page')"
+                    :active="Route::is('dashboard.user') ? 'active' : ''"
+                />
+            @endcan
+
             <div class="menu-title">{{ __('Menu Title') }}</div>
 
             <x-partials.sidebar-link
