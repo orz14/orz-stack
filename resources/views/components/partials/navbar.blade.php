@@ -12,6 +12,9 @@
 
             <div class="dropdown-content">
                 <a href="{{ route('profile.edit') }}">{{ __('Profile') }}</a>
+                @can('admin')
+                    <a href="{{ url('/log') }}" target="_blank">{{ __('Log') }}</a>
+                @endcan
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button onclick="return confirm('Are you sure want to logout?')">{{ __('Logout') }}</button>
