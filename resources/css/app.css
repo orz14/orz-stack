@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom */
-.box-shadow {
-    box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
-}
-
 /* Sidebar */
 .sidebar {
     @apply fixed h-full w-[260px] bg-white p-[15px] z-[99];
@@ -16,6 +11,9 @@
 }
 .sidebar a {
     @apply text-[#697a8d] no-underline;
+}
+.sidebar li {
+    @apply my-1;
 }
 .menu-content {
     @apply relative w-full h-full overflow-y-scroll;
@@ -30,7 +28,7 @@
     transform: translateX(-56%);
 }
 .menu-title {
-    @apply text-[#a1acb8] text-[10px] md:text-[12px] py-[15px] px-[15px] uppercase cursor-default select-none;
+    @apply text-[#a1acb8] text-[10px] md:text-[12px] py-3 px-[15px] uppercase cursor-default select-none;
 }
 .item {
     @apply rounded-xl;
@@ -89,7 +87,7 @@
     @apply fixed p-6 bg-[#F5F5F9];
 }
 .navbar {
-    @apply w-full px-6 py-2 flex items-center justify-between gap-x-5 text-[#697a8d] bg-white rounded-md box-shadow;
+    @apply w-full px-6 py-2 flex items-center justify-between gap-x-5 text-[#697a8d] bg-white rounded-md shadow-box;
 }
 .navbar #sidebar-close {
     @apply cursor-pointer;
@@ -106,7 +104,7 @@
     @apply relative block;
 }
 .dropdown-content {
-    @apply hidden absolute right-0 bg-white min-w-[160px] rounded-md overflow-auto box-shadow z-[1];
+    @apply hidden absolute right-0 bg-white min-w-[160px] rounded-md overflow-auto shadow-box z-[1];
 }
 .dropdown-content a,
 .dropdown-content button {

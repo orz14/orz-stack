@@ -22,14 +22,14 @@
             <div class="flex items-center space-x-4">
                 <div class="shrink-0">
                     @isset($user->avatar)
-                        <img class="object-cover w-16 h-16 rounded-full" src="{{ asset('storage/' . $user->avatar) }}" alt="{{ $user->name }}" />
+                        <img class="object-cover w-16 h-16 rounded-full image-preview" src="{{ asset('storage/' . $user->avatar) }}" alt="{{ $user->name }}" />
                     @else
-                        <img class="object-cover w-16 h-16 rounded-full" src="{{ asset('assets/img/profile.webp') }}" alt="{{ $user->name }}" />
+                        <img class="object-cover w-16 h-16 rounded-full image-preview" src="{{ asset('assets/img/profile.webp') }}" alt="{{ $user->name }}" />
                     @endisset
                 </div>
                 <label class="block">
                     <span class="sr-only">{{ __('Choose File') }}</span>
-                    <input type="file" name="avatar" id="avatar" accept="image/*" class="block w-full text-sm text-[#697a8d] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-200 file:text-indigo-700 hover:file:bg-indigo-300 focus:outline-none file:transition-all file:!cursor-pointer" />
+                    <input type="file" name="avatar" id="image" accept="image/*" class="block w-full text-sm text-[#697a8d] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-200 file:text-indigo-700 hover:file:bg-indigo-300 focus:outline-none file:transition-all file:!cursor-pointer" onchange="previewImage()" />
                 </label>
             </div>
             <div class="mt-2">
@@ -54,16 +54,16 @@
             
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div>
-                    <p class="text-sm mt-2 text-gray-800">
+                    <p class="mt-2 text-sm text-gray-800">
                         {{ __('Your email address is unverified.') }}
 
-                        <button form="send-verification" class="underline text-sm text-gray-600 hover:text-gray-900">
+                        <button form="send-verification" class="text-sm text-gray-600 underline hover:text-gray-900">
                             {{ __('Click here to re-send the verification email.') }}
                         </button>
                     </p>
 
                     @if (session('status') == 'verification-link-sent')
-                        <p class="mt-2 font-medium text-sm text-green-600">
+                        <p class="mt-2 text-sm font-medium text-green-600">
                             {{ __('A new verification link has been sent to your email address.') }}
                         </p>
                     @endif

@@ -19,6 +19,7 @@
 
         {{-- Styles --}}
         @vite('resources/css/app.css')
+        @if (isset($styles)) {{ $styles }} @endif
     </head>
     <body class="antialiased text-[#697a8d] bg-[#F5F5F9] text-sm md:text-base">
         <x-partials.sidebar />
@@ -38,5 +39,6 @@
         {{-- Scripts --}}
         @vite('resources/js/app.js')
         <script src="{{ asset('assets/js/main.js') }}"></script>
+        @if (isset($scripts)) {{ $scripts }} @endif
     </body>
 </html>
