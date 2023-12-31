@@ -17,6 +17,9 @@
 .sidebar a {
     @apply text-[#697a8d] no-underline;
 }
+.sidebar li {
+    @apply my-1;
+}
 .menu-content {
     @apply relative w-full h-full overflow-y-scroll;
 }
@@ -30,7 +33,7 @@
     transform: translateX(-56%);
 }
 .menu-title {
-    @apply text-[#a1acb8] text-[10px] md:text-[12px] py-[15px] px-[15px] uppercase cursor-default select-none;
+    @apply text-[#a1acb8] text-[10px] md:text-[12px] py-3 px-[15px] uppercase cursor-default select-none;
 }
 .item {
     @apply rounded-xl;
