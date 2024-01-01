@@ -4,7 +4,7 @@
         <div class="dropdown">
             <button class="dropbtn">
                 @isset(auth()->user()->avatar)
-                    <img src="{{ asset('storage/' . auth()->user()->avatar) }}" alt="{{ auth()->user()->name }}" class="object-cover w-full h-full" />
+                    <img src="{{ auth()->user()->avatar }}" alt="{{ auth()->user()->name }}" class="object-cover w-full h-full" />
                 @else
                     <img src="{{ asset('assets/img/profile.webp') }}" alt="{{ auth()->user()->name }}" class="object-cover w-full h-full" />
                 @endisset

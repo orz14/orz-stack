@@ -22,7 +22,7 @@
             <div class="flex items-center space-x-4">
                 <div class="shrink-0">
                     @isset($user->avatar)
-                        <img class="object-cover w-16 h-16 rounded-full image-preview" src="{{ asset('storage/' . $user->avatar) }}" alt="{{ $user->name }}" />
+                        <img class="object-cover w-16 h-16 rounded-full image-preview" src="{{ $user->avatar }}" alt="{{ $user->name }}" />
                     @else
                         <img class="object-cover w-16 h-16 rounded-full image-preview" src="{{ asset('assets/img/profile.webp') }}" alt="{{ $user->name }}" />
                     @endisset

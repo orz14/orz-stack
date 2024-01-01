@@ -37,7 +37,7 @@ class ProfileController extends Controller
         ]);
         if ($request->file('avatar')) {
             if (auth()->user()->avatar) {
-                Storage::delete(auth()->user()->avatar);
+                Storage::delete($request->user()->rawAvatar());
             }
             $validatedData['avatar'] = $request->file('avatar')->store('avatar');
         }
@@ -91,7 +91,7 @@ class ProfileController extends Controller
         Auth::logout();
         $user->delete();
         if ($user->avatar) {
-            Storage::delete($user->avatar);
+            Storage::delete($user->rawAvatar());
         }
         $request->session()->invalidate();
         $request->session()->regenerateToken();
