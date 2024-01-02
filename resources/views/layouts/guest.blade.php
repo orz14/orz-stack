@@ -16,6 +16,7 @@
 
         {{-- Scripts --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @if (isset($styles)) {{ $styles }} @endif
     </head>
     <body class="text-sm antialiased text-gray-900 bg-gray-100 md:text-base">
         <div class="container">
@@ -31,5 +32,7 @@
                 </div>
             </div>
         </div>
+
+        @if (isset($scripts)) {{ $scripts }} @endif
     </body>
 </html>

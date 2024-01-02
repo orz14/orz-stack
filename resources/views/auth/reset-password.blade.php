@@ -24,4 +24,12 @@
             </x-button>
         </form>
     </main>
+
+    <x-slot name="styles">
+        @livewireStyles
+    </x-slot>
+
+    <x-slot name="scripts">
+        @livewireScripts
+    </x-slot>
 </x-guest-layout>
