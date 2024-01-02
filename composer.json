@@ -56,9 +56,8 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php artisan storage:link --ansi",
-            "@npm install",
-            "@php artisan migrate --ansi",
-            "@npm run build"
+            "npm install",
+            "npm run build"
         ]
     },
     "extra": {
