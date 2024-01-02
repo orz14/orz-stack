@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom */
+::selection {
+    @apply text-white bg-indigo-900/90;
+}
+
 /* Sidebar */
 .sidebar {
     @apply fixed h-full w-[260px] bg-white p-[15px] z-[99];
@@ -149,4 +154,9 @@
     to {
         transform: scaleX(1);
     }
+}
+
+/* particles.js */
+#particles-js {
+    @apply w-full h-screen;
 }
