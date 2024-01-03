@@ -1,24 +1,14 @@
 <p align="center"><a href="https://orzproject.my.id" target="_blank"><img src="https://cdn.jsdelivr.net/gh/orz14/orzcode@main/img/orz-stack_laravel.webp" width="400" alt="ORZ Stack Logo"></a></p>
 
-## About Laravel
+## About ORZ Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ORZ Stack is the skeleton application for the Laravel starter kit project. It comes equipped with a system authentication that includes both manual authentication and socialite authentication. Additionally, ORZ Stack includes several built-in packages that I frequently use, such as Tailwind CSS, Livewire, Eloquent Sluggable, and many more. It offers a feature-rich boilerplate to kickstart your project and expedite your development process. Now, you're ready to create your awesome project.
 
 ## System Requirements
 
 -   PHP 8.1
 -   Composer
--   NodeJS & NPM
+-   NodeJS & NPM/PNPM
 -   MySQL
 
 ## Installation
