@@ -63,7 +63,7 @@
             "@php artisan storage:link --ansi"
         ],
         "post-package-install": [
-            "bash -c 'if [ -x \"$(command -v pnpm)\" ]; then pnpm install && pnpm build; else npm install && npm run build; fi'"
+            "./install.sh"
         ]
     },
     "extra": {
