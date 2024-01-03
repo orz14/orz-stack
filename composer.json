@@ -60,7 +60,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@php artisan storage:link --ansi",
+            "@php artisan storage:link --ansi"
+        ],
+        "post-package-install": [
             "if command -v pnpm &> /dev/null; then pnpm install; else npm install; fi",
             "if command -v pnpm &> /dev/null; then pnpm build; else npm run build; fi"
         ]
