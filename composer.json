@@ -63,8 +63,7 @@
             "@php artisan storage:link --ansi"
         ],
         "post-package-install": [
-            "if command -v pnpm &> /dev/null; then pnpm install; else npm install; fi",
-            "if command -v pnpm &> /dev/null; then pnpm build; else npm run build; fi"
+            "if command -v pnpm &> /dev/null; then pnpm install && pnpm build; else npm install && npm run build; fi"
         ]
     },
     "extra": {
