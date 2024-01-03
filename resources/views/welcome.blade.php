@@ -29,7 +29,7 @@
 
                         <p class="py-1">
                             <span class="px-2 py-1 text-white bg-gray-800">
-                                {{ __('The skeleton application for the Laravel starter project.') }}
+                                {{ __('The skeleton application for the Laravel starter kit project.') }}
                             </span>
                         </p>
 
