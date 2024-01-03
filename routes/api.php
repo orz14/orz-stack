@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return response()->json([
+        'name' => config('app.name', 'ORZ Stack'),
+        'description' => 'The skeleton application for the Laravel starter kit project.',
+        'framework' => 'Laravel v'.app()->version(),
+        'php' => 'v'.PHP_VERSION,
+    ], 200);
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
