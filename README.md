@@ -2,7 +2,7 @@
 
 ## About ORZ Stack
 
-ORZ Stack is the skeleton application for the Laravel starter kit project. It comes equipped with a system authentication that includes both manual authentication and socialite authentication. Additionally, ORZ Stack includes several built-in packages that I frequently use, such as Tailwind CSS, Livewire, Eloquent Sluggable, and many more. It offers a feature-rich boilerplate to kickstart your project and expedite your development process. Now, you're ready to create your awesome project.
+ORZ Stack is the skeleton application for the Laravel starter kit project. It comes equipped with a system authentication that includes both basic authentication and socialite authentication. Additionally, ORZ Stack includes several built-in packages that I frequently use, such as Tailwind CSS, Livewire, Eloquent Sluggable, and many more. It offers a feature-rich boilerplate to kickstart your project and expedite your development process. Now, you're ready to create your awesome project.
 
 ## System Requirements
 
