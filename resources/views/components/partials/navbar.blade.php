@@ -4,17 +4,19 @@
         <div class="dropdown">
             <button class="dropbtn">
                 @isset(auth()->user()->avatar)
-                    <img src="{{ auth()->user()->avatar }}" alt="{{ auth()->user()->name }}" class="object-cover w-full h-full" />
+                    <img src="{{ auth()->user()->avatar }}" alt="{{ auth()->user()->name }}"
+                        class="object-cover w-full h-full" />
                 @else
-                    <img src="{{ asset('assets/img/profile.webp') }}" alt="{{ auth()->user()->name }}" class="object-cover w-full h-full" />
+                    <img src="{{ asset('assets/img/profile.webp') }}" alt="{{ auth()->user()->name }}"
+                        class="object-cover w-full h-full" />
                 @endisset
             </button>
 
             <div class="dropdown-content">
                 <a href="{{ route('profile.edit') }}">{{ __('Profile') }}</a>
-                @can('admin')
+                @role('admin')
                     <a href="{{ url('/log') }}" target="_blank">{{ __('Log') }}</a>
-                @endcan
+                @endrole
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button onclick="return confirm('Are you sure want to logout?')">{{ __('Logout') }}</button>
