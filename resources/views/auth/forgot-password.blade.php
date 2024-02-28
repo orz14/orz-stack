@@ -8,8 +8,8 @@
     </div>
 
     {{-- Session Status --}}
-    <x-auth-session-status class="mb-5" :status="session('status')" />
-    
+    <x-auth-session-status class="mb-5" />
+
     <main>
         <form action="{{ route('password.email') }}" method="POST" class="space-y-4">
             @csrf
@@ -17,7 +17,8 @@
             {{-- Email --}}
             <div>
                 <x-input-label for="email" :text="__('Email')" />
-                <x-text-input type="email" name="email" id="email" class="mt-1" :value="old('email')" required autofocus />
+                <x-text-input type="email" name="email" id="email" class="mt-1" :value="old('email')" required
+                    autofocus />
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
@@ -25,8 +26,9 @@
                 <x-button class="w-full bg-gray-800 hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900">
                     {{ __('Email Password Reset Link') }}
                 </x-button>
-                
-                <x-button-link :to="route('login')" class="w-full bg-gray-500 hover:bg-gray-400 focus:bg-gray-400 active:bg-gray-600">
+
+                <x-button-link :to="route('login')"
+                    class="w-full bg-gray-500 hover:bg-gray-400 focus:bg-gray-400 active:bg-gray-600">
                     {{ __('Back') }}
                 </x-button-link>
             </div>
