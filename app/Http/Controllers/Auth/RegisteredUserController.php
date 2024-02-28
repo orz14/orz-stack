@@ -36,6 +36,7 @@ class RegisteredUserController extends Controller
         ]);
 
         $user = User::create($validatedData);
+        $user->assignRole('user');
 
         event(new Registered($user));
 
