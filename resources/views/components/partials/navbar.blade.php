@@ -19,7 +19,7 @@
                 @endrole
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button onclick="return confirm('Are you sure want to logout?')">{{ __('Logout') }}</button>
+                    <button type="submit">{{ __('Logout') }}</button>
                 </form>
             </div>
         </div>

@@ -63,7 +63,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php artisan storage:link --ansi",
-            "npm install && npm run build"
+            "pnpm install && pnpm build || npm install && npm run build"
         ]
     },
     "extra": {

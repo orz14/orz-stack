@@ -29,11 +29,19 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authenticate();
+        try {
+            $request->authenticate();
 
-        $request->session()->regenerate();
+            $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+            return redirect()->intended(RouteServiceProvider::HOME);
+        } catch (\Throwable $err) {
+            if ($err->getMessage() == 'This password does not use the Bcrypt algorithm.') {
+                return back()->with('err', 'Error: Your account is registered as a social account.');
+            }
+
+            return back()->with('err', 'Error: '.$err->getMessage());
+        }
     }
 
     /**
