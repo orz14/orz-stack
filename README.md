@@ -6,7 +6,7 @@ ORZ Stack is the skeleton application for the Laravel starter kit project. It co
 
 ## System Requirements
 
--   PHP 8.1
+-   PHP >= 8.1
 -   Composer
 -   NodeJS & NPM/PNPM
 -   MySQL
