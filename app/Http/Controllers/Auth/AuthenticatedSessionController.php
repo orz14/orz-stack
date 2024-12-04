@@ -37,10 +37,10 @@ class AuthenticatedSessionController extends Controller
             return redirect()->intended(RouteServiceProvider::HOME);
         } catch (\Throwable $err) {
             if ($err->getMessage() == 'This password does not use the Bcrypt algorithm.') {
-                return back()->with('err', 'Error: Your account is registered as a social account.');
+                return back()->with('err', 'Error: Your account is registered as a social account.')->withInput($request->only('email'));
             }
 
-            return back()->with('err', 'Error: '.$err->getMessage());
+            return back()->with('err', 'Error: ' . $err->getMessage())->withInput($request->only('email'));
         }
     }
 
@@ -64,7 +64,7 @@ class AuthenticatedSessionController extends Controller
 
             return redirect()->intended(RouteServiceProvider::HOME);
         } catch (\Throwable $err) {
-            return to_route('login')->with('status', 'Error: '.$err->getMessage());
+            return to_route('login')->with('status', 'Error: ' . $err->getMessage());
         }
     }
 
